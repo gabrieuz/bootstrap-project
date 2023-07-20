@@ -1,0 +1,89 @@
+:root {
+  --text-color: #0f1026;
+  --background-color: #f2f2f2;
+  --primary-color: #4976f2;
+}
+
+* {
+  list-style: none;
+}
+
+/* Geral */
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+.container-fluid {
+  padding: 70px 0;
+}
+
+.row {
+  margin: 0;
+}
+
+
+/* Sobre */
+
+#about-section {
+  background-color: var(--background-color);
+}
+
+.main-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.main-title::after {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 1.5px;
+  background-color: var(--text-color);
+  margin: 10px auto;
+}
+
+#about-title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+#about-list {
+  padding: 0;
+}
+
+li {
+  line-height: 30px;
+}
+
+#about-list i {
+  color: var(--primary-color)
+}
+
+/* Serviços */
+
+#services-section div.row div {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#services-section div.row div i {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#services-section div.row div h4 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+#services-section div.row div:hover> :is(i, h4) {
+  color: var(--primary-color);
+}
+
+#services-section div.row div :is(i, h4) {
+  transition: color 0.3s ease-in-out;
+}
