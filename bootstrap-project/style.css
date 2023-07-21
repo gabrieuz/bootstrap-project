@@ -87,3 +87,41 @@ li {
 #services-section div.row div :is(i, h4) {
   transition: color 0.3s ease-in-out;
 }
+
+/* Trabalhe Conosco */
+
+#apply-section {
+  height: 500px;
+}
+
+#apply-section .row {
+  background-color: black;
+}
+
+#apply-section .row, #apply-img {
+  height: 100%;
+}
+
+#apply-img {
+  background-image: url(./img/empresa.jpg);
+  background-size: cover;
+}
+
+#apply-content {
+  color: white;
+  margin: auto 0;
+  background-color: black;
+}
+
+#apply-button {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 10px 50px;
+  font-size: 18px;
+}
+
+#apply-button:hover {
+  background-color: cyan;
+  border: 2px solid cyan;
+}
