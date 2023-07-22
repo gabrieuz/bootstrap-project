@@ -3,7 +3,8 @@
   --section-title: #333333;
   --subtitle-color: #444444;
   --background-color: #f2f2f2;
-  --primary-color: #4976f2;
+  --primary-color: #ff9513;
+  --accent-color: #232F3E;
 }
 
 * {
@@ -19,7 +20,7 @@ body {
 }
 
 .container-fluid {
-  padding: 70px 0;
+  padding: 60px 0;
 }
 
 .row {
@@ -104,7 +105,8 @@ li {
   background-color: black;
 }
 
-#apply-section .row, #apply-img {
+#apply-section .row,
+#apply-img {
   height: 100%;
 }
 
@@ -117,6 +119,8 @@ li {
   color: white;
   margin: auto 0;
   background-color: black;
+  padding: 5%;
+  max-height: 100%;
 }
 
 #apply-button {
@@ -128,6 +132,23 @@ li {
 }
 
 #apply-button:hover {
-  background-color: cyan;
-  border: 2px solid cyan;
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+/* Dados (Loaders) */
+
+#data-section {
+  text-align: center;
+}
+
+.circle-box div {
+  padding: 0 40px;
+}
+
+#circleA {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
 }
