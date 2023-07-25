@@ -3,22 +3,62 @@
 :root {
 
     /* Cores Gerais */
-    --text-color: #0f1026;
+    /* --text-color: #0f1026;
     --section-title: #333333;
     --subtitle-color: #444444;
     --background-color: #f2f2f2;
     --primary-color: #ff9513;
     --accent-color: #232F3E;
-    --links-hover: #ff9513;
+    --links-hover: #ff9513; */
 
     /* Cores de elementos e seções */
 
-    --navbar-color: #f2f2f2;
+    /* --navbar-color: #f2f2f2;
     --main-btn-color: #ff9513;
     --services-icons: #444444;
-    --contact-section: #d5943e;
-}
+    --contact-section: #d5943e; */
 
+
+    /* Tema Claro */
+    [data-theme="light"] {
+        /* Cores Gerais */
+        --text-color: #0f1026;
+        --section-title: #333333;
+        --subtitle-color: #444444;
+        --background-color: #f2f2f2;
+        --primary-color: #ff9513;
+        --accent-color: #232F3E;
+        --links-hover: #ff9513;
+
+        /* Cores de elementos e seções */
+
+        --navbar-color: #f2f2f2;
+        --main-btn-color: #ff9513;
+        --services-icons: #444444;
+        --contact-section: #d5943e;
+    }
+
+
+
+    /* Tema Escuro */
+    [data-theme="dark"] {
+        /* Cores Gerais */
+        --text-color: #f2f2f2;
+        --section-title: #e3e3e3;
+        --subtitle-color: #cccccc;
+        --background-color: #333333;
+        --primary-color: #ff9513;
+        --accent-color: #eeeeee;
+        --links-hover: #ff9513;
+
+        /* Cores de elementos e seções */
+        --navbar-color: #f2f2f2;
+        --main-btn-color: #ff9513;
+        --services-icons: #444444;
+        --contact-section: #d5943e;
+    }
+
+}
 
 /* Gerais */
 
@@ -320,6 +360,13 @@ header,
     border: 2px solid #444;
     transition: .5s;
     text-decoration: none;
+}
+
+.portifolio-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 #portifolio-btn-box {
