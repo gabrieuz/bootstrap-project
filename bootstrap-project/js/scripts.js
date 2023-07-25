@@ -6,7 +6,7 @@ $(document).ready(function(){
         color: '#ff9513',
         strokeWidth: 8,
         duration: 1400,
-        from: { color: '#aaa' },
+        from: { color: '#ffffff' },
         to: { color: '#ff9513' },
         step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
@@ -20,7 +20,7 @@ $(document).ready(function(){
         color: '#ff9513',
         strokeWidth: 8,
         duration: 1600,
-        from: { color: '#aaa' },
+        from: { color: '#ffffff' },
         to: { color: '#ff9513' },
         step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
@@ -34,7 +34,7 @@ $(document).ready(function(){
         color: '#ff9513',
         strokeWidth: 8,
         duration: 2000,
-        from: { color: '#aaa' },
+        from: { color: '#ffffff' },
         to: { color: '#ff9513' },
         step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
@@ -48,7 +48,7 @@ $(document).ready(function(){
         color: '#ff9513',
         strokeWidth: 8,
         duration: 2200,
-        from: { color: '#aaa' },
+        from: { color: '#ffffff' },
         to: { color: '#ff9513' },
         step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
