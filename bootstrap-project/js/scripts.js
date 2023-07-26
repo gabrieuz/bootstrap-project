@@ -1,21 +1,3 @@
-const themeToggleBtn = document.getElementById("theme-toggle-btn");
-const themeIcon = document.getElementById("theme-icon");
-
-themeToggleBtn.addEventListener("click", () => {
-	const root = document.documentElement;
-	const currentTheme = root.getAttribute("data-theme");
-
-	if (currentTheme === "light") {
-		root.setAttribute("data-theme", "dark");
-		themeIcon.classList.remove("fa-sun");
-		themeIcon.classList.add("fa-moon");
-	} else {
-		root.setAttribute("data-theme", "light");
-		themeIcon.classList.remove("fa-moon");
-		themeIcon.classList.add("fa-sun");
-	}
-});
-
 $(document).ready(function () {
 	// Progress bar
 	let containerA = document.getElementById("circleA");

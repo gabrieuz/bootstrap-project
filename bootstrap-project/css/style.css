@@ -1,69 +1,53 @@
 /* Tema */
 
-:root {
-
+/* Tema Claro */
+[data-theme="light"] {
     /* Cores Gerais */
-    /* --text-color: #0f1026;
+    --text-color: #0f1026;
     --section-title: #333333;
     --subtitle-color: #444444;
-    --background-color: #f2f2f2;
+    --background-color: #ffffff;
     --primary-color: #ff9513;
     --accent-color: #232F3E;
-    --links-hover: #ff9513; */
+    --links-hover: #ff9513;
+    --section-bg: #f9f9f9;
 
     /* Cores de elementos e seções */
 
-    /* --navbar-color: #f2f2f2;
+    --navbar-color: #1E1E1E;
+    --navbar-text: #fff;
     --main-btn-color: #ff9513;
     --services-icons: #444444;
-    --contact-section: #d5943e; */
-
-
-    /* Tema Claro */
-    [data-theme="light"] {
-        /* Cores Gerais */
-        --text-color: #0f1026;
-        --section-title: #333333;
-        --subtitle-color: #444444;
-        --background-color: #f2f2f2;
-        --primary-color: #ff9513;
-        --accent-color: #232F3E;
-        --links-hover: #ff9513;
-
-        /* Cores de elementos e seções */
-
-        --navbar-color: #f2f2f2;
-        --main-btn-color: #ff9513;
-        --services-icons: #444444;
-        --contact-section: #d5943e;
-    }
+    --contact-section: #d5943e;
+    --section-bg: #f9f9f9;
+}
 
 
 
-    /* Tema Escuro */
-    [data-theme="dark"] {
-        /* Cores Gerais */
-        --text-color: #f2f2f2;
-        --section-title: #e3e3e3;
-        --subtitle-color: #cccccc;
-        --background-color: #333333;
-        --primary-color: #ff9513;
-        --accent-color: #eeeeee;
-        --links-hover: #ff9513;
+/* Tema Escuro */
+[data-theme="dark"] {
+    /* Cores Gerais */
+    --text-color: #f2f2f2;
+    --section-title: #e3e3e3;
+    --subtitle-color: #cccccc;
+    --background-color: #333333;
+    --primary-color: #ff9513;
+    --accent-color: #eeeeee;
+    --links-hover: #ff9513;
 
-        /* Cores de elementos e seções */
-        --navbar-color: #f2f2f2;
-        --main-btn-color: #ff9513;
-        --services-icons: #444444;
-        --contact-section: #d5943e;
-    }
-
+    /* Cores de elementos e seções */
+    --navbar-color: #f2f2f2;
+    --navbar-text: #fff;
+    --main-btn-color: #ff9513;
+    --services-icons: #444444;
+    --contact-section: #d5943e;
 }
 
 /* Gerais */
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
 }
 
 .row {
@@ -76,7 +60,8 @@ body {
 
 p,
 li {
-    color: var(--subtitle-color) font-size: 14px;
+    color: var(--subtitle-color);
+    font-size: 14px;
 }
 
 /* Barra de navegação */
@@ -97,6 +82,11 @@ header,
     width: 100px;
 }
 
+#theme-icon {
+    padding: 0 10px;
+    color: var(--primary-color);
+}
+
 .navbar-brand {
     padding: 0;
 }
@@ -106,7 +96,7 @@ header,
 }
 
 #navbar-links a {
-    color: var(--text-color);
+    color: var(--navbar-text);
 }
 
 #navbar-links a:hover {
@@ -120,6 +110,7 @@ header,
 .navbar-nav .nav-link {
     cursor: pointer;
     transition: .5s;
+    color: var(--navbar-text);
 }
 
 #navbar-expand-lg .navbar-nav .nav-link {
@@ -132,24 +123,19 @@ header,
     padding: 0;
 }
 
-#mainSlider .carousel-inner,
-#mainSlider .carousel-item {
-    height: 90vh;
-}
-
-#mainSlider .carousel-caption {
+#carousel-area .carousel-caption {
     top: 30%;
 }
 
-#mainSlider .carousel-caption h2 {
+#carousel-area .carousel-caption h1 {
     font-size: 50px;
     margin-bottom: 30px;
 }
 
-#mainSlider .carousel-caption p {
+#carousel-area .carousel-caption p {
     font-size: 22px;
     font-weight: 300;
-    margin-bottom: 100px;
+    margin-bottom: 10%;
     color: #fff;
 }
 
@@ -197,7 +183,7 @@ header,
 /* Sobre a Empresa */
 
 #about-area {
-    background-color: #f9f9f9;
+    background-color: var(--section-bg);
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
 
@@ -394,7 +380,7 @@ header,
     border-color: var(--primary-color);
 }
 
-/* News Letter */
+/* Novidades */
 
 #news-area {
     text-align: center;
@@ -565,29 +551,29 @@ header,
         margin-right: 16px;
     }
 
-    #mainSlider .carousel-inner,
-    #mainSlider .carousel-item {
+    #carousel-area .carousel-inner,
+    #carousel-area .carousel-item {
         height: auto;
     }
 
-    #mainSlider .carousel-caption h2 {
+    #carousel-area .carousel-caption h1 {
         font-size: 28px;
     }
 
-    #mainSlider .carousel-caption p {
+    #carousel-area .carousel-caption p {
         font-size: 18px;
         margin-bottom: 40px;
     }
 
-    .carousel-caption {
-        left: 10%;
-        right: 10%;
+    #carousel-btn {
+        margin-bottom: 10%;
+        padding: 5px 10px;
     }
 
-    /* About */
+    /* Sobre */
 
 
-    /* Data */
+    /* Dados */
 
     .circle-box div {
         padding: 0 10px;
@@ -637,26 +623,39 @@ header,
     #call-area #call-btn {
         font-size: 16px;
     }
+
+}
+
+@media(max-width: 850px) {
+    #carousel-area .carousel-caption p {
+        display: none;
+    }
+}
+
+@media(max-width: 990px) {
+    #navbar-links a {
+        padding-left: 20px;
+    }
 }
 
 /* Mobile */
 @media(max-width: 425px) {
 
     /* Slider */
-    #mainSlider {
+    #carousel-area {
         margin-top: 90px;
     }
 
-    #mainSlider .carousel-caption {
+    #carousel-area .carousel-caption {
         top: 5%;
     }
 
-    #mainSlider .carousel-caption h2 {
-        font-size: 18px;
+    #carousel-area .carousel-caption h1 {
+        font-size: 16px;
         margin-bottom: 40px;
     }
 
-    #mainSlider .carousel-caption p {
+    #carousel-area .carousel-caption p {
         display: none;
     }
 
@@ -729,5 +728,16 @@ header,
     .contact-box {
         border: none;
         margin-bottom: 0;
+    }
+}
+
+@media(max-width: 490px) {
+    #carousel-btn {
+        margin-bottom: 10%;
+        padding: 5px 10px;
+    }
+
+    #carousel-area .carousel-caption h1 {
+        margin-bottom: 20px;
     }
 }
