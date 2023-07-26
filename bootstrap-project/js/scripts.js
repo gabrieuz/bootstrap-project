@@ -73,74 +73,25 @@ $(document).ready(function () {
 		}
 	});
 
-	// Filtro do portfólio
+	let cards = document.querySelectorAll(".card");
+	let btns = document.querySelectorAll(".portifolio-btn");
 
-	$(".portifolio-btn").on("click", function () {
-		let type = $(this).attr("id");
-		let boxes = $(".project-box");
+	btns.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			let filter = btn.getAttribute("id");
 
-		$(".main-btn").removeClass("active");
-		$(this).addClass("active");
+			cards.forEach((card) => {
+				let cardFilter = card.getAttribute("id");
 
-		if (type == "dsg-btn") {
-			eachBoxes("dsg", boxes);
-		} else if (type == "dev-btn") {
-			eachBoxes("dev", boxes);
-		} else if (type == "seo-btn") {
-			eachBoxes("seo", boxes);
-		} else {
-			eachBoxes("all", boxes);
-		}
-	});
-
-	function eachBoxes(type, boxes) {
-		if (type == "all") {
-			$(boxes).fadeIn();
-		} else {
-			$(boxes).each(function () {
-				if (!$(this).hasClass(type)) {
-					$(this).fadeOut("slow");
+				if (filter === cardFilter || filter === "all") {
+					card.classList.remove("hidden");
 				} else {
-					$(this).fadeIn();
+					card.classList.add("hidden");
 				}
 			});
-		}
-	}
-
-	// scroll para seções
-	let navBtn = $(".nav-item");
-
-	let bannerSection = $("#mainSlider");
-	let aboutSection = $("#about-area");
-	let servicesSection = $("#services-area");
-	let teamSection = $("#team-area");
-	let portfolioSection = $("#portfolio-area");
-	let contactSection = $("#contact-area");
-
-	let scrollTo = "";
-
-	$(navBtn).click(function () {
-		let btnId = $(this).attr("id");
-
-		if (btnId == "about-menu") {
-			scrollTo = aboutSection;
-		} else if (btnId == "services-menu") {
-			scrollTo = servicesSection;
-		} else if (btnId == "team-menu") {
-			scrollTo = teamSection;
-		} else if (btnId == "portfolio-menu") {
-			scrollTo = portfolioSection;
-		} else if (btnId == "contact-menu") {
-			scrollTo = contactSection;
-		} else {
-			scrollTo = bannerSection;
-		}
-
-		$([document.documentElement, document.body]).animate(
-			{
-				scrollTop: $(scrollTo).offset().top - 70,
-			},
-			1500
-		);
+		});
 	});
+
+	
+
 });
