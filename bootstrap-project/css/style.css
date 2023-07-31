@@ -541,6 +541,18 @@ header,
     color: var(--contact-section);
 }
 
+/* Mapa do Site */
+
+#sitemap-area i {
+    color: var(--primary-color);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#sitemap-area a {
+    color: #ffffff;
+}
+
 /* Responsive */
 
 @media(max-width: 768px) {
